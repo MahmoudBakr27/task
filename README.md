@@ -1,8 +1,8 @@
-using System; 
+    using System; 
 
-namespace Oop;  
+    namespace Oop;  
 
-public class Person{
+    public class Person{
     private string _name;
     public string Name{
         get { return _name; }
@@ -25,16 +25,16 @@ public class Person{
                 _age = value; 
             }
     }
-public Person(string name , int age){
+    public Person(string name , int age){
     Name = name;
     Age = age;
     }   
     public virtual void Print(){
     Console.WriteLine($"My name is {Name}, my age is {Age}");
     }
-}
+    }
 
-public class Student : Person {
+    public class Student : Person {
     private int _year;
     public int Year{
         get { return _year; }
@@ -57,17 +57,17 @@ public class Student : Person {
                 _gpa = value; 
             }
     }
-public Student(string name , int age,  int year, float gpa) : base(name , age){
+    public Student(string name , int age,  int year, float gpa) : base(name , age){
         Year = year;
         Gpa = gpa;
     }
-public override void Print(){
+    public override void Print(){
         Console.WriteLine($"My name is {Name}, my age is {Age}, and gpa is {Gpa}");
     }
 }
 
 
-public class Database{
+    public class Database{
 
     int _currentIndex;
 
@@ -90,9 +90,9 @@ public class Database{
         }
     } 
 
-}
+    }
 
-public class Staff : Person {
+    public class Staff : Person {
     private double _salary;
     public double Salary{
         get { return _salary; }
@@ -116,19 +116,19 @@ public class Staff : Person {
             }
     }
 
- public Staff(string name , int age, double salary, int joinYear) : base(name , age){
+    public Staff(string name , int age, double salary, int joinYear) : base(name , age){
         Salary = salary;
         JoinYear = joinYear;
     }
 
- public override void Print(){
+    public override void Print(){
         Console.WriteLine($"My name is {Name}, my age is {Age}, and my salary is {Salary}");
     }
 
-}
+    }
 
-public class Task
-{
+    public class Task
+    {
     private static void Main()
     {
         var database = new Database();
