@@ -1,4 +1,3 @@
-# task
 using System; 
 
 namespace Oop;  
@@ -26,8 +25,7 @@ public class Person{
                 _age = value; 
             }
     }
-
-    public Person(string name , int age){
+public Person(string name , int age){
     Name = name;
     Age = age;
     }   
@@ -59,13 +57,11 @@ public class Student : Person {
                 _gpa = value; 
             }
     }
-
-    public Student(string name , int age,  int year, float gpa) : base(name , age){
+public Student(string name , int age,  int year, float gpa) : base(name , age){
         Year = year;
         Gpa = gpa;
     }
-
-    public override void Print(){
+public override void Print(){
         Console.WriteLine($"My name is {Name}, my age is {Age}, and gpa is {Gpa}");
     }
 }
@@ -120,12 +116,12 @@ public class Staff : Person {
             }
     }
 
-    public Staff(string name , int age, double salary, int joinYear) : base(name , age){
+ public Staff(string name , int age, double salary, int joinYear) : base(name , age){
         Salary = salary;
         JoinYear = joinYear;
     }
 
-    public override void Print(){
+ public override void Print(){
         Console.WriteLine($"My name is {Name}, my age is {Age}, and my salary is {Salary}");
     }
 
